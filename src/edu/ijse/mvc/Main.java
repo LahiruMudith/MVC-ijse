@@ -5,9 +5,11 @@
 package edu.ijse.mvc;
 
 import edu.ijse.mvc.db.DBConnection;
+import edu.ijse.mvc.view.ItemView;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.WindowConstants;
 
 /**
  *
@@ -26,6 +28,9 @@ public class Main {
         } catch (ClassNotFoundException ex) {
             Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
         }
+        ItemView itemView = new ItemView();
+        itemView.setLocationRelativeTo(null);
+        itemView.setVisible(true);
     }
     
 }
